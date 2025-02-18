@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitzplan & Glücksrad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Sitzplan & Glücksrad</h1>
+
+    <button onclick="newList()">Neue Liste erstellen</button>
+    <button onclick="showSavedPlans()">Gespeicherte Pläne anzeigen</button>
+
+    <div id="mainScreen" class="hidden">
+        <h2>Namensliste</h2>
+        <textarea id="nameList"></textarea>
+        <button onclick="saveList()">Speichern</button>
+
+        <h2>Sitzplan</h2>
+        <div id="grid" class="grid"></div>
+        <button onclick="spinWheel()">Ziehen</button>
+        <button onclick="resetSeats()">Sitzordnung löschen</button>
+        <button onclick="saveSeatPlan()">Sitzplan speichern</button>
+    </div>
+
+    <div id="savedPlans" class="hidden">
+        <h2>Gespeicherte Sitzpläne</h2>
+        <ul id="plansList"></ul>
+        <button onclick="hideSavedPlans()">Schließen</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
